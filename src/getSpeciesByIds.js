@@ -5,7 +5,7 @@ function getSpeciesByIds(...ids) {
   if (!ids) {
     return [];
   }
-  return species.filter((specie) => ids.includes(specie.id))
+  return species.filter((specie) => ids.includes(specie.id));
 }
 
 // console.log(getSpeciesByIds())
