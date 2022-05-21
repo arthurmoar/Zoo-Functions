@@ -1,28 +1,32 @@
 const handlerElephants = require('../src/handlerElephants');
 
 describe('Testes da função HandlerElephants', () => {
-  it('Should return 4 if handlerElephants is passed with "count"', () => {
+  
+  it('Deve returnar 4 se handlerElephants for chamado com parametro count', () => {
     expect(handlerElephants('count')).toBe(4);
   });
-  it('Should return an array with the name of all elephants if handlerElephants is passed with "names"', () => {
+
+  it('Deve returnar um array com o nome de todos os elefantes se handlerElephants for passada com "names"', () => {
     expect(handlerElephants('names')).toContain('Jefferson');
   });
-  it('Should return a number close to 10.5 if handlerElephants is passed with "averageAge"', () => {
+
+  it('Deve returnar um numero próximo de 10.5 se handlerElephants for passada com "averageAge"', () => {
     expect(handlerElephants('averageAge')).toBeCloseTo(10.5);
   });
-  it('Should return null if handlerElephants is passed with an invalid first param', () => {
-    expect(handlerElephants('any')).toBeNull();
-  });
-  it('Should return undefined if handlerElephants is passed with no params', () => {
+
+  it('Deve returnar undefined se handlerElephants for passado sem parametros', () => {
     expect(handlerElephants()).toBeUndefined();
   });
-  it('Should return "Parâmetro inválido, é necessário uma string" when handlerElephants param is not a string ', () => {
-    expect(handlerElephants(123)).toMatch('Parâmetro inválido, é necessário uma string');
-  });
-  it('Should return 5 if handlerElephants is called with param popularity', () => {
+
+  it('Deve returnar 5 se handlerElephants for chamado com parametro popularity', () => {
     expect(handlerElephants('popularity')).toBe(5);
   });
-  it('Should return 4 if handlerElephants is called with param count', () => {
-    expect(handlerElephants('count')).toBe(4);
+
+  it('Deve returnar "Parâmetro inválido, é necessário uma string" quando handlerElephants parametro não é uma string ', () => {
+    expect(handlerElephants(123)).toMatch('Parâmetro inválido, é necessário uma string');
+  });
+  
+  it('Deve returnar null se handlerElephants for passado com um parametro invalido primeiro', () => {
+    expect(handlerElephants('any')).toBeNull();
   });
 });
