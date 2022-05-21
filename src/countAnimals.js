@@ -8,7 +8,7 @@ const getAnimals = () => {
   });
 
   return countBySpecie;
-}
+};
 
 const countAnimals = (animal) => {
   if (!animal) return getAnimals();
@@ -18,6 +18,6 @@ const countAnimals = (animal) => {
   const getByGender = residents.filter(({ sex }) => sex === animal.sex).length;
 
   return (animal.sex) ? getByGender : residents.length;
-}
+};
 
 module.exports = countAnimals;
