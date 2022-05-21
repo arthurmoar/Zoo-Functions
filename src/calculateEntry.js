@@ -11,7 +11,7 @@ const countEntrants = (entrants = {}) => {
   };
 
   return entries;
-}
+};
 
 function calculateEntry(entrants) {
   const checkedEntries = countEntrants(entrants);
