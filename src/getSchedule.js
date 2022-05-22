@@ -19,7 +19,7 @@ const generateSchedule = () => {
 
   schedule.Monday = { officeHour: 'CLOSED', exhibition: 'The zoo will be closed!' };
   return schedule;
-}
+};
 
 const filterDay = ((scheduleTarget) => {
   const scheduleOfDay = {};
@@ -30,9 +30,7 @@ const filterDay = ((scheduleTarget) => {
   return scheduleOfDay;
 });
 
-const getAnimal = ((animal) => {
-  return species.find(({ name }) => name === animal).availability;
-});
+const getAnimal = (animal) => species.find(({ name }) => name === animal).availability;
 
 function getSchedule(scheduleTarget) {
   const week = Object.keys(hours);
